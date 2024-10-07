@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tractor Buying Website</title>
+    <link rel="stylesheet" href="T22.css">
+</head>
+<body>
+    <header>
+        <h1>Tractor Buying Platform</h1>
+        <input type="text" id="search-bar" placeholder="Search tractors...">
+    </header>
+
+    <section id="tractor-list">
+        <!-- Tractors will be populated here dynamically -->
+    </section>
+
+    <!-- Payment modal -->
+    <div id="payment-modal" class="hidden">
+        <div class="modal-content">
+            <h2>Complete Payment</h2>
+            <p>Fill in your payment details to proceed.</p>
+            <form id="payment-form">
+                <label for="payment-method">Select Payment Method:</label>
+                <select id="payment-method">
+                    <option value="bank">Bank</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="razorpay">Razorpay</option>
+                    <option value="account">A/C NO</option>
+                    <option value="cheque ">Cheque NO</option>
+                    <option value="cash on">Cash</option>
+                    <option value="EMI">EMI</option>
+                </select><br>
+
+                <label for="payment-details">Payment Details:</label>
+                <input type="text" id="payment-details" placeholder="Enter your payment ID"><br>
+
+                <label for="contact-info">Your Phone Number:</label>
+                <input type="text" id="contact-info" placeholder="Enter your phone number"><br>
+
+
+                <label for="account-info">Your A/C Number:</label>
+                <input type="text" id="account-info" placeholder="Enter your A/C"><br>
+
+                <button type="submit" id="submit-payment">Submit Payment</button>
+                <button type="button" id="close-modal">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="T33.js"></script>
+</body>
+</html>

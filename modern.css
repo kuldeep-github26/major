@@ -1,0 +1,909 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #26c6a6;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #45a049;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #3e8e41;
+}
+
+/* Hero Section */
+.hero {
+     background: url('farm-background.jpg') no-repeat center center/cover; 
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #45a049;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #3e8e41;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+/* .services-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.service h3 {
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 16px;
+    color: #555;
+} */
+
+
+/* .services-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.service-icon {
+  font-size: 50px;
+  color: #4caf50;
+  transition: transform 0.3s;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(360deg);
+}
+
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card {
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+ */
+/* Container styles */
+/* .services-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px;
+  background-color: #f5f5f5;
+} */
+
+/* Card styles */
+/* .service-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+} */
+
+/* Hover effect with unique background color change */
+/* .service-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+/* Different hover background colors for each card */
+/* .service-card:nth-child(1):hover {
+  background-color: #4caf50;
+} */
+
+/* .service-card:nth-child(2):hover {
+  background-color: #ff9800;
+}
+
+.service-card:nth-child(3):hover {
+  background-color: #03a9f4;
+} */
+
+/* Icon styles */
+/* .service-icon {
+  font-size: 50px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(360deg);
+  color: #fff;
+} */
+
+/* Text styles */
+/* .service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+  transition: color 0.3s;
+} */
+
+/* .service-card:hover .service-title {
+  color: #fff;
+} */
+
+/* .service-description {
+  font-size: 1rem;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.service-card:hover .service-description {
+  color: #fff;
+} */
+
+/* Fade-in effect on hover */
+/* .service-card {
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* Container styles */
+
+ .service-section {
+  padding: 50px;
+  /* background-color: #fff; */
+  text-align: center;
+}
+
+.service-section h2 {
+  margin-bottom: 10px;
+  font-size: 40px;
+
+} 
+
+.services-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+/* Card styles */
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Unique background color on hover */
+.service-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:nth-child(1):hover {
+  background-color: #4caf50; /* Organic Farming */
+}
+
+.service-card:nth-child(2):hover {
+  background-color: #ff9800; /* Equipment Sales */
+}
+
+.service-card:nth-child(3):hover {
+  background-color: #03a9f4; /* Crop Consulting */
+}
+
+.service-card:nth-child(4):hover {
+  background-color: #673ab7; /* Soil Testing */
+}
+
+.service-card:nth-child(5):hover {
+  background-color: #009688; /* Water Management */
+}
+
+.service-card:nth-child(6):hover {
+  background-color: #e91e63; /* Pest Control */
+}
+
+.service-card:nth-child(7):hover {
+  background-color: #ffeb3b; /* Harvest Assistance */
+}
+
+.service-card:nth-child(8):hover {
+  background-color: #9c27b0; /* Farm Training Programs */
+}
+
+/* Icon styles */
+.service-icon {
+  font-size: 50px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(360deg);
+  color: #fff;
+}
+
+/* Text styles */
+.service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+  transition: color 0.3s;
+}
+
+.service-card:hover .service-title {
+  color: #fff;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.service-card:hover .service-description {
+  color: #fff;
+}
+
+/* Fade-in effect on hover */
+.service-card {
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.service-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.service-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.service-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.service-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-btn-section {
+  background-color: #ff9800;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.service-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Crop section styles */
+.crop-section {
+  padding: 60px;
+  background-color: #fffbe0;
+  text-align: center;
+}
+
+.crop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.crop-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.crop-card:hover {
+  transform: translateY(-10px);
+}
+
+.crop-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.crop-title {
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
+
+.crop-description {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #666;
+}
+
+.crop-details {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.crop-details span {
+  display: block;
+  margin-top: 5px;
+}
+
+/* Price section styles */
+
+.price-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.price-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: rgba(6, 155, 6, 0.641);
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+
+/* Container styles */
+.machines-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 60px;
+  background-color: #f0f8e8;
+}
+
+/* Machine card */
+.machine-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Machine image */
+.machine-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover image zoom effect */
+.machine-card:hover .machine-image {
+  transform: scale(1.1);
+}
+
+/* Machine details */
+.machine-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.machine-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.machine-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.machine-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+/* Overlay details on hover */
+.machine-card:hover .machine-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Overlay for more details */
+.machine-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.machine-overlay h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.machine-overlay p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Button styles */
+.machine-btn {
+  background-color: #ff9800;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.machine-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-section input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-section input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+ 
+  
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  :root {
+    --primary-color: #c6c3c3;
+    --second-color: #ffffff;
+    --black-color: #000000;
+  }
+  
+  body {
+    background-image: url("https://images.pexels.com/photos/2748716/pexels-photo-2748716.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--second-color);
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .login_box {
+    position: relative;
+    width: 450px;
+    backdrop-filter: blur(25px);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 7.5em 2.5em 4em 2.5em;
+    color: var(--second-color);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+  width: 140px;
+  height: 70px;
+  border-radius: 0 0 20px 20px;
+}
+
+.login-header span {
+  font-size: 30px;
+  color: var(--black-color);
+}
+
+.login-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 50%;
+  background: transparent;
+  box-shadow: 15px 0 0 0 var(--primary-color);
+}
+
+.login-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 50%;
+  background: transparent;
+  box-shadow: -15px 0 0 0 var(--primary-color); /* Removed space before --primary-color */
+}
+
+.input_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.input-field {
+  width: 100%;
+  height: 55px;
+  font-size: 16px;
+  background: transparent;
+  color: var(--second-color);
+  padding-inline: 20px 50px;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  outline: none;
+}
+
+#user {
+  margin-bottom: 10px;
+}
+
+.label {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  transition: 0.2s;
+}
+
+.input-field:focus ~ .label,
+.input-field:valid .label {
+  /* Added missing closing brace here */
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  color: var(--black-color);
+  padding: 0 10px;
+} /* Closed the missing brace */
+
+.icon {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px;
+  }
+  
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  
+  .input-submit {
+    width: 100%;
+    height: 50px;
+    background: #ececec;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .input-submit:hover {
+    background: var(--second-color);
+  }
+  .register {
+    text-align: center;
+  }
+  
+  .register a {
+    font-weight: 500;
+  }
+  
+  @media only screen and (max-width: 564px) {
+    .wrapper {
+      padding: 20px;
+    }
+  
+    .login_box {
+      padding: 7.5em 1.5em 4em 1.5em;
+ }
+  }  
+  
