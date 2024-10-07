@@ -1,442 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agriculture Landing Page</title>
+    <title>Login & Sign Up</title>
     <style>
-        /* Global Styles */
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        /* Header Section */
-        header {
-            background: url('https://www.usda.gov/sites/default/files/styles/featured_image/public/2023-08/ocx-listen-better-serve-better-blog-082423.jpg?itok=w3alvNo0') no-repeat center center/cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 350px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-        header h1 {
-            font-size: 4rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            animation: zoomIn 1.5s ease-in-out;
-        }
-
-        header p {
-            font-size: 1.3rem;
-            margin-top: 20px;
-            animation: slideIn 2s ease-in-out;
-        }
-
-        header .cta-button {
-            margin-top: 40px;
-            padding: 15px 35px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        header .cta-button:hover {
-            background-color: #388E3C;
-            transform: scale(1.05);
-        }
-
-        /* Animated Decorative Elements */
-        .floating-leaf {
-            position: absolute;
-            width: 100px;
-            animation: float 6s ease-in-out infinite;
-            opacity: 0.7;
-        }
-
-        .leaf1 {
-            top: 30%;
-            left: -50px;
-        }
-
-        .leaf2 {
-            top: 50%;
-            right: -50px;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Owner Name Style */
-        .owner-name {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            font-size: 1.2rem;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 15px 25px;
-            border-radius: 15px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            animation: bounceIn 2s ease-in-out;
-            transition: transform 0.3s, background-color 0.3s;
-            cursor: pointer; /* Indicate clickable */
-        }
-
-        .owner-name:hover {
-            transform: scale(1.1);
-            background-color: rgba(0, 0, 0, 0.7); /* Change background on hover */
-        }
-
-        /* Section Styles */
-        section {
-            padding: 60px 0;
-            text-align: center;
-            background: #fff;
-        }
-
-        section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 50px;
+        
+        h2 {
+            margin-bottom: 30px;
             color: #333;
-            position: relative;
-            display: inline-block;
         }
-
-        section h2::after {
-            content: '';
-            width: 70px;
-            height: 4px;
-            background-color: #4CAF50;
-            display: block;
-            margin: 10px auto 0;
-        }
-
-        .features-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .feature-box {
-            background-color: #f9f9f9;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            width: 280px;
-        }
-
-        .feature-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .feature-box img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-box:hover img {
-            transform: rotate(10deg);
-        }
-
-        /* Additional Feature Boxes */
-        .additional-feature-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-
-        /* Our Clients Section */
-        .clients-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .client-box {
-            background-color: #e0e0e0;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            width: 150px;
-            text-align: center;
-        }
-
-        .client-box img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .client-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Viewers and Likes Section */
         
-        .viewers-likes-container {
-            margin: 60px 0;
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-        }
-       
-        
-        .counter-box {
-            background-color: blueviolet;
-            color: white;
-            padding: 20px 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .counter-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .like-button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: white;
-            color: black;
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            border-radius: 25px;
+            background: #f0f0f0;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            outline: none;
         }
 
-        .like-button:hover {
-            background-color: #e0e0e0;
-        }
-#video-section {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-#video-section h2 {
-    color: #2e7d32; /* Customize color */
-}
-
-#video-section p {
-    font-size: 1.2em;
-}
-
-        /* Footer */
-        footer {
-            background-color: #4CAF50;
+        input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
             color: white;
-            padding: 30px;
-            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
         }
 
-        footer p {
-            margin: 0;
+        .container p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .container p a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        #createAccountForm {
+            display: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Grow with Nature</h1>
-        <p>Providing Advanced Solutions for Agriculture</p>
-        <a href="file:///C:/Users/user/Desktop/my%20java/project/buy%20trcater/main%20code/index.html" class="cta-button">Explore More</a></button>
-        <!-- <button onclick="file:///C:/Users/user/Desktop/my%20java/project/buy%20trcater/main%20code/index.html"  class="cta-button">Explore More</button> -->
- <!-- Animated Elements -->
- <img src="https://static.vecteezy.com/system/resources/thumbnails/049/099/939/small_2x/scattered-green-leaves-floating-leaves-tree-cut-out-transparent-png.png" alt="Floating Leaf" class="floating-leaf leaf1">
- <img src="https://static.vecteezy.com/system/resources/thumbnails/049/099/939/small_2x/scattered-green-leaves-floating-leaves-tree-cut-out-transparent-png.png" alt="Floating Leaf" class="floating-leaf leaf2">
-
- <!-- Owner Name -->
- <div class="owner-name" onclick="ownerNameClick()">
-     Kuldeep Chauhan
- </div>
-</header>
-
-<!-- Viewers and Likes Section -->
-<section>
- <h2>Viewers & Likes</h2>
- <div class="viewers-likes-container">
-     <div class="counter-box">
-         <h3 id="viewers-count">0</h3>
-         <p>Viewers</p>
-     </div>
-     <div class="counter-box">
-         <h3 id="likes-count">0</h3>
-         <p>Likes</p>
-         <button class="like-button" onclick="incrementLikes()">Like</button>
-     </div>
- </div>
-</section>
-
-<!-- Features Section -->
-<section id="video-section" style="text-align: center; margin: 20px 0;">
-    <h2>Agriculture Insights</h2>
-    <p>Watch our informative video on agriculture.</p>
-    <iframe 
-    width="560" 
-    height="315" 
-    src="C:\Users\user\Downloads\3616640-hd_1920_1080_24fps.mp4" 
-    frameborder="0" 
-     allowfullscreen>
-    </iframe>
-    </section>
-<section>
- <h2>Our Expertise</h2>
- <div class="features-container">
-    <div class="feature-box">
-        <img src="tractor.png" alt="Tractor">
-        <h3>Tractor Deals</h3>
-        <p>Find the perfect tractor for your farming needs with unbeatable prices.</p>
-    </div>
-    <div class="feature-box">
-        <img src="https://media.istockphoto.com/id/527229644/photo/planting-seeds.jpg?s=612x612&w=0&k=20&c=42c_9MIwl59_8oh4fKCW1m-BDlhZLi31tTP3_sRYoWk=" alt="Seeds">
-        <h3>Quality Seeds</h3>
-        <p>High-quality seeds that guarantee a bountiful harvest with Expertise</p>
-    </div>
-    <div class="feature-box">
-        <img src="spray.png" alt="Spray">
-        <h3>Pesticide Sprays</h3>
-        <p>Effective pesticide solutions to protect your crops.</p>
-    </div>
-    <div class="feature-box">
-        <img src="fertilizer.png" alt="Fertilizer">
-        <h3>Fertilizers</h3>
-        <p>Premium fertilizers for healthy plant growth.</p>
-    </div>
+<div class="container" id="loginFormContainer">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="#" id="signUpLink">Sign up here</a></p>
 </div>
-</section>
 
-<!-- Our Products Section -->
-<section>
-<h2>Our Products</h2>
-<div class="additional-feature-container">
-    <div class="feature-box">
-        <img src="https://assets.tractorjunction.com/tractor-junction/assets/images/upload/upload-1632218624-0.webp?format=webp" alt="Tractor">
-        <h3>Tractors</h3>
-        <p>Explore our range of tractors tailored for every farm size.</p>
-    </div>
-    <div class="feature-box">
-        <img src="https://media.istockphoto.com/id/527229644/photo/planting-seeds.jpg?s=612x612&w=0&k=20&c=42c_9MIwl59_8oh4fKCW1m-BDlhZLi31tTP3_sRYoWk=" alt="Seeds">
-        <h3>Good Quality Seeds</h3>
-        <p>Top-notch seeds for effective cultivation.</p>
-    </div>
-    <div class="feature-box">
-        <img src="https://as2.ftcdn.net/v2/jpg/06/19/61/49/1000_F_619614997_oQIkjHVMvc2INbVBE21FE1U3k5HGE5ys.jpg" alt="Spray">
-        <h3>Effective Sprays</h3>
-        <p>Keep your crops safe with our pesticide sprays.</p>
-    </div>
+<!-- Create Account Form -->
+<div class="container" id="createAccountForm">
+    <h2>Create Account</h2>
+    <form id="signUpForm">
+        <input type="text" id="newUsername" name="newUsername" placeholder="Username" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="newPassword" name="newPassword" placeholder="Password" required>
+        <input type="submit" value="Create Account">
+    </form>
+    <p>Already have an account? <a href="#" id="loginLink">Login here</a></p>
 </div>
-</section>
 
-<!-- Our Clients Section -->
-<section>
-<h2>Our Clients</h2>
-<div class="clients-container">
-    <div class="client-box">
-        <img src="client1.png" alt="Client Logo 1">
-        <p>Client 1</p>
-    </div>
-    <div class="client-box">
-        <img src="client2.png" alt="Client Logo 2">
-        <p>Client 2</p>
-    </div>
-    <div class="client-box">
-        <img src="client3.png" alt="Client Logo 3">
-        <p>Client 3</p>
-    </div>
-    <div class="client-box">
-        <img src="client4.png" alt="Client Logo 4">
-        <p>Client 4</p>
-    </div>
-</div>
-</section>
-
-<!-- Contact Us Section -->
-<section>
-<h2>Contact Us</h2>
-<p>If you have any questions or inquiries, feel free to reach out!</p>
-<button class="cta-button">Get in Touch</button>
-</section>
-
-<section id="video-section" style="text-align: center; margin: 20px 0;">
-<h2>Agriculture Insights</h2>
-<p>Watch our informative video on agriculture.</p>
-<iframe 
-width="560" 
-height="315" 
-src="https://v.ftcdn.net/04/11/40/73/700_F_411407389_euLB4YXxBsDiHWy4SRqLANAxqfa5otdJ_ST.mp4" 
-frameborder="0" 
- allowfullscreen>
-</iframe>
-</section>
-
-
-<!-- Footer Section -->
-<footer>
-<p>&copy; 2024 Agriculture Hub. All Rights Reserved.</p>
-</footer>
-<script>
-    // Initialize viewers count
-    let viewersCount = 0;
-    const viewersDisplay = document.getElementById('viewers-count');
-
-    // Simulate a viewer every second
-    setInterval(() => {
-        viewersCount++;
-        viewersDisplay.textContent = viewersCount;
-    }, 1000);
-
-    // Initialize likes count from local storage
-    let likesCount = localStorage.getItem('likesCount') || 0;
-    document.getElementById('likes-count').textContent = likesCount;
-
-    // Increment likes
-    function incrementLikes() {
-        likesCount++;
-        localStorage.setItem('likesCount', likesCount);
-        document.getElementById('likes-count').textContent = likesCount;
-    }
-
-    function ownerNameClick() {
-        // Action when name is clicked
-        alert("Thank you for your interest!");
-        // You can also redirect to another URL
-        // window.location.href = "https://yourwebsite.com";
-    }
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
